@@ -109,7 +109,7 @@ const main = () => {
   // console.log(getHeight(BST));
   // console.log(tree);
   // console.log(isBST(tree));
-  console.log(findThirdLgKey(BST));
+  // console.log(findThirdLgKey(BST));
   // console.log(balanceBST(BST));
 };
 
