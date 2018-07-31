@@ -1,0 +1,38 @@
+BST - EASYQUESTION
+
+                          E
+                       /     \
+                     A         S
+                      \      /   \  
+                       E    Q      Y
+                          /  \    /   
+                         I    S  U
+                          \     /  
+                            O  T
+                           /
+                          N
+
+BST - 3,1,4,6,9,2,5,7
+
+                          3
+                        /   \
+                       1     4
+                        \     \  
+                         2     6
+                              /  \  
+                             5    9
+                                 /
+                                7
+
+
+Removing the ROOT would created 2 sepatate BST with 
+the new ROOTs being the children of the original ROOT.
+The left BST is actually a 2 link linked list.
+
+                       1    |    4
+                        \   |      \  
+                         2  |       6
+                            |      /  \  
+                            |     5    9
+                            |         /
+                            |        7
