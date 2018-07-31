@@ -23,13 +23,9 @@ const getHeight = BST => {
   if (BST.key === null) {
     return 0;
   }
-  let left = getHeight(BST.left);
-  let right = getHeight(BST.right);
-  if (left > right) {
-    return left + 1;
-  } else {
-    return right + 1;
-  }
+  let left = BST.left !== null ? getHeight(BST.left) : 0;
+  let right = BST.right !== null ? getHeight(BST.right) : 0;
+  return left > right ? left + 1 : right + 1;
 };
 
 //////////////////////////////////////////////////////
