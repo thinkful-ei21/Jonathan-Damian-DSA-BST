@@ -19,8 +19,17 @@ const populateBST = () => {
 
 //////////////////////////////////////////////////////
 
-const giveHeight = BST => {
-  //logic!
+const getHeight = BST => {
+  if (BST.key === null) {
+    return 0;
+  }
+  let left = getHeight(BST.left);
+  let right = getHeight(BST.right);
+  if (left > right) {
+    return left + 1;
+  } else {
+    return right + 1;
+  }
 };
 
 //////////////////////////////////////////////////////
@@ -31,14 +40,37 @@ const isBST = BST => {
 
 //////////////////////////////////////////////////////
 
-const findThirdLgNode = BST => {
+const findThirdLgKey = BST => {
   //logic!
 };
 
 //////////////////////////////////////////////////////
 
 const balanceBST = BST => {
-  //logic!
+  const minHeight = (node = this.key) => {
+    if (node === null) {
+      return 0;
+    }
+    let left = minHeight(node.left);
+    let right = minHeight(node.right);
+    if (left > right) {
+      return left + 1;
+    } else {
+      return right + 1;
+    }
+  };
+  const maxHeight = (node = this.key) => {
+    if (node === null) {
+      return 0;
+    }
+    let left = maxHeight(node.left);
+    let right = maxHeight(node.right);
+    if (left > right) {
+      return left + 1;
+    } else {
+      return right + 1;
+    }
+  };
 };
 
 //////////////////////////////////////////////////////
@@ -46,8 +78,9 @@ const balanceBST = BST => {
 const main = () => {
   const BST = populateBST();
 
-  console.log(BST);
-  // console.log(giveHeight(BST));
+  // console.log(BST);
+  console.log(getHeight(BST));
+  // console.log(isBST)
 };
 
 main();
